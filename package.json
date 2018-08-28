@@ -1,0 +1,27 @@
+{
+  "name": "daily-coding-challenge",
+  "version": "1.0.0",
+  "description": "This is my daily algorithm implementation challenge using the ctci book. All implementations are in javascript and I have also added my own implementation of the basic data structures such as linked list, stacks, queues, etc. instead of using arrays.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Keeady/daily-coding-challenge.git"
+  },
+  "author": "Camaria Bevavy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Keeady/daily-coding-challenge/issues"
+  },
+  "homepage": "https://github.com/Keeady/daily-coding-challenge#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "^5.2.0",
+    "unit.js": "^2.0.0"
+  }
+}
