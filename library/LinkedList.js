@@ -4,6 +4,9 @@ var LinkedNode_1 = require("./LinkedNode");
 var LinkedList = /** @class */ (function () {
     function LinkedList() {
     }
+    LinkedList.prototype.getHead = function () {
+        return this.head;
+    };
     LinkedList.prototype.add = function (data) {
         var node = new LinkedNode_1.LinkedNode(data, null, null);
         if (!this.head) {

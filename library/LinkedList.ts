@@ -1,7 +1,11 @@
 import {LinkedNode} from "./LinkedNode";
 
 export class LinkedList {
-    head: LinkedNode;
+    protected head: LinkedNode;
+
+    getHead() {
+        return this.head;
+    }
 
     add(data: string) {
         let node = new LinkedNode(data, null, null);

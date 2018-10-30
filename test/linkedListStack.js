@@ -1,0 +1,15 @@
+var test = require('unit.js');
+var linkedListStack = require('../List/LinkedListStack');
+var lstack = new linkedListStack.LinkedListStack();
+lstack.push(2);
+test.value(lstack.top()).is(2);
+test.value(lstack.pop()).is(2);
+test.value(lstack.top()).isNull();
+test.value(lstack.pop()).isNull();
+lstack.push(3);
+lstack.push(4);
+test.value(lstack.top()).is(4);
+test.value(lstack.pop()).is(4);
+test.value(lstack.top()).is(3);
+test.value(lstack.pop()).is(3);
+test.value(lstack.top()).isNull();
