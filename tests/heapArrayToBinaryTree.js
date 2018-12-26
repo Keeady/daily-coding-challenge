@@ -1,0 +1,10 @@
+var test = require('unit.js');
+var heapArrayToBinaryTree = require('../Tree/heapArrayToBinaryTree');
+var arr = [1, 3, 4, 5, 10];
+var res = heapArrayToBinaryTree(arr);
+test.value(res.printValue()).is(1);
+test.value(res.getLeft().printValue()).is(3);
+test.value(res.getRight().printValue()).is(4);
+var three = res.getLeft();
+test.value(three.getLeft().printValue()).is(5);
+test.value(three.getRight().printValue()).is(10);

@@ -24,3 +24,29 @@ is pointing at the mth element
 ## Implement a queue using two stacks
 
 ## Implement a stack using two queues 
+
+## Add two numbers
+You are given two non-empty linked lists representing two non-negative integers. 
+The digits are stored in reverse order and each of their nodes contain a single digit. 
+Add the two numbers and return it as a linked list.
+
+You may assume the two numbers do not contain any leading zero, except the number 0 itself.
+
+Example:
+Input: (2 -> 4 -> 3) + (5 -> 6 -> 4)
+Output: 7 -> 0 -> 8
+Explanation: 342 + 465 = 807.
+
+## Intersection of Two Linked Lists
+Write a program to find the node at which the intersection of two singly linked lists begins.
+For example, the following two linked lists:
+Input: intersectVal = 8, listA = [4,1,8,4,5], listB = [5,0,1,8,4,5], skipA = 2, skipB = 3
+Output: Reference of the node with value = 8
+Input Explanation: The intersected node's value is 8 (note that this must not be 0 if the 
+two lists intersect). From the head of A, it reads as [4,1,8,4,5]. From the head of B, 
+it reads as [5,0,1,8,4,5]. There are 2 nodes before the intersected node in A; 
+There are 3 nodes before the intersected node in B.
+
+## Merge k Sorted Lists
+Given K sorted linked lists of size N each, merge them and print the sorted output.
+Merge k sorted linked lists and return it as one sorted list.
