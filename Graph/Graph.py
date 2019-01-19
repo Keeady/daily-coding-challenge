@@ -6,6 +6,30 @@ class Graph:
     def __init__(self):
         self.nodes = {}
 
+    def get_node(self, name):
+        if name not in self.nodes:
+            return None
+
+        return self.nodes[name]
+
+    def add_direct_path(self, actor1, actor2, movie):
+        # path from actor1 to actor2
+
+        if actor1 in self.nodes:
+            node1 = self.nodes[actor1]
+        else:
+            node1 = GraphNode.GraphNode(actor1)
+
+        if actor2 in self.nodes:
+            node2 = self.nodes[actor2]
+        else:
+            node2 = GraphNode.GraphNode(actor2)
+
+        node1.add_path(node2, movie)
+
+        self.nodes[actor1] = node1
+        self.nodes[actor2] = node2
+
     def add_path(self, actor1, actor2, movie):
         if actor1 in self.nodes:
             actor_node1 = self.nodes[actor1]

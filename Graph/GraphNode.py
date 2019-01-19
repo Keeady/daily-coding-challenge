@@ -10,3 +10,9 @@ class GraphNode:
             edge = GraphEdge.GraphEdge(edge_name, node)
             self.edges[node.name] = edge
 
+    def has_path(self, node):
+        if node.name in self.edges:
+            return True
+
+        return False
+

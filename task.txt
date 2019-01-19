@@ -1,0 +1,54 @@
+Checking if a string contains a valid sequence of opening and closing parentheses
+
+'''
+
+
+const ltrs1 = ['a', 'b', 'b', 'o','o', 'n'];
+const ltrs2 = ['a', 'b', 'c', 'n','r', 's'];
+const ltrs3 = ['a', 'b', 'o', 'n','r', 's'];
+
+const spell = 'baboon';
+
+function spellcheck(word, letters) {
+ //your code here
+}
+
+'''
+
+Convert from any base to decimal and vice versa
+
+Write a program to convert a the representation of a number in one base to its representation in another base, where the bases can range from 2 to 36.
+
+char* convert(char* number, int fromBase, int toBase);
+
+essentially.
+
+
+Given an input array of integers, return an array of the same size such that that ith element in the output array is the
+product of every element in the input array other than the ith element of the input array. Restriction: do not use division
+in your algorithm. This should be done in O(n) time complexity.
+
+
+Write a function that, given a dot-separated path to a JSON-like object changes an input string to another value is the
+string matches. Each level of the object (except the first) might be a string, a list of strings, an another object,
+a list of objects, or a list of other objects. ... To be honest, the guy who asked the question did a poor job of phrasing
+it and seemed to be a bit confused about what he was asking to begin with. He was stumbling over his own definition, and
+was a poor communicator in general.
+ { a: { b: '1', c: '2' } }
+ a.b.c
+
+
+Write a function to reverse an integer, without using any intermediate storage except for other integer values.
+
+
+
+Write a function that, given an inventory of titles (say movies), and a starting movie title, returns the longest list
+of titles (in which each title appears only once) where the first word of the next title in the list is equal to the
+last word of the preceding title.
+
+
+design facebook newsfeed
+
+design a photo sharing service
+
+
