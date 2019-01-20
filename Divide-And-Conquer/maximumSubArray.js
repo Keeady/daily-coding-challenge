@@ -28,7 +28,7 @@ function findMaxCrossSubArray(elements, low, mid, high) {
     var maxLeftIndex;
     var i = mid;
     var sum = 0;
-    while (i >= 0) {
+    while (i >= low) {
         sum += elements[i];
         if (sum > maxLeftSum) {
             maxLeftSum = sum;
