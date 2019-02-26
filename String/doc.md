@@ -48,3 +48,7 @@ Given a string s, find the longest palindromic substring in s. You may assume th
 the maximum length of s is 1000.
    
 ## String to Integer (atoi)
+
+
+## Folder path tree structure
+Given a list of strings containing folder paths, convert it into a tree structure, using a language of your choice.  
