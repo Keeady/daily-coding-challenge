@@ -1,4 +1,5 @@
 from Most_Frequent_Words import find_k_frequent_words
+import heapq
 
 
 def test_word_freq():
@@ -13,3 +14,39 @@ def test_word_freq():
             assert False
 
     assert True
+
+
+def test_obj():
+    book = 'me me me is me we'
+
+    class freq:
+        def __init__(self, text):
+            self.text = text
+            self.count = 1
+
+        def increment(self):
+            self.count += 1
+
+    my_dict = {}
+    me = freq('me')
+    we = freq('we')
+    my_dict['me'] = me
+    my_dict['we'] = we
+
+    freq_words = []
+    heapq.heappush(freq_words, (me.count, me))
+    heapq.heappush(freq_words, (we.count, we))
+
+    me.increment()
+    heapq.heapify(freq_words)
+    we.increment()
+    heapq.heapify(freq_words)
+    we.increment()
+    heapq.heapify(freq_words)
+
+
+
+    print(freq_words[0].text)
+    print(freq_words[1].text)
+
+    assert False

@@ -1,3 +1,6 @@
+import queue
+
+
 def find_optimal_combination(arr1, arr2, target):
     max_total = 0
     max_pairs = []
@@ -30,30 +33,49 @@ def find_combination_sum(arr1, arr2, target):
 
     output = []
     max_total = 0
-    left = []
-    right = []
 
-    i = 0
-    j = len(arr2) - 1
+    left = 0
+    right = len(arr2) - 1
 
-    while i < len(arr1):
-        left = arr1[i]
-        while j >= 0:
-            right = arr2[j]
-            temp_total = left[1] + right[1]
-            if temp_total <= target:
-                if temp_total > max_total:
-                    max_total = temp_total
-                    output = []
-                    output.append([left[0], right[0]])
-                elif temp_total == max_total:
-                    output.append([left[0], right[0]])
-                else:
-                    i += 1
-                    break
-            else:
-                j -= 1
-        i += 1
+    visited_indices = {}
+
+    queue_indices = queue.Queue()
+    queue_indices.put((left, right))
+
+    while not queue_indices.empty():
+        pos = queue_indices.get()
+        left = pos[0]
+        right = pos[1]
+
+        if left < 0 or left >= len(arr1) or right < 0 or right >= len(arr2):
+            continue
+
+        if pos in visited_indices:
+            continue
+        else:
+            visited_indices[pos] = True
+
+        total = arr1[left][1] + arr2[right][1]
+        print(left, right, total)
+        if total > max_total and total <= target:
+            max_total = total
+            output = []
+
+        if total == max_total:
+            output.append([arr1[left][0], arr2[right][0]])
+
+        if total < target:
+            queue_indices.put((left + 1, right))
+            queue_indices.put((left, right + 1))
+            queue_indices.put((left + 1, right + 1))
+
+        elif total > target:
+            queue_indices.put((left - 1, right))
+            queue_indices.put((left, right - 1))
+            queue_indices.put((left - 1, right - 1))
+
+        else:
+            queue_indices.put((left - 1, right + 1))
+            queue_indices.put((left + 1, right - 1))
 
     return output
-
